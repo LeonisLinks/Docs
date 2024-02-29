@@ -54,17 +54,55 @@ effects:
 #### Background
 The effects for the background are:
 
+<div class="grid cards" markdown>
+
 -   `blurred`: The background is blurred.
+
+    ---
+
+    ![Blurred](assets/blurred.png)
+
 -   `old_tv`: The background is like an old TV.
+
+    ---
+
+    ![Old TV](assets/oldtv.png)
+
 -   `night_time`: The background is darken.
+    
+    ---
+
+    ![Night Time](assets/nighttime.png)
+
+</div>
 
 #### Name
 The effects for the name are:
 
+<div class="grid cards" markdown>
+
 -   `rainbow`: The name is like a rainbow.
+
+    ---
+
+    ![Rainbow](assets/rainbow.gif)
+
 -   `flash`: The name is flashing.
+
+    ---
+
+    ![Flash](assets/flash.gif)
+
+</div>
 
 #### Description
 The effects for the description are:
 
+<div class="grid cards" markdown>
+
 -   `typewriter`: The description is like a typewriter.
+    
+    ---
+
+    ![Typewriter](assets/typewriter.gif)
+</div>
