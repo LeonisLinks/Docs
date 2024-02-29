@@ -1,0 +1,108 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Backend - Leonis",
+    "description": "This is a simple Backend for Leonis",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://leonis.oriondev.fr"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Get health of the backend",
+        "description": "Get health of the backend",
+        "operationId": "getHealth",
+        "responses": {
+          "200": {
+            "description": "Backend is healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BackendHealthy"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Backend is not healthy"
+          },
+          "500": {
+            "description": "Backend is not healthy"
+          }
+        }
+      }
+    },
+    "/discord": {
+      "get": {
+        "summary": "Get Discord Info from a Discord ID",
+        "description": "Get Discord Info from a Discord ID",
+        "operationId": "getDiscordInfo",
+        "parameters": [
+          {
+            "name": "i",
+            "in": "query",
+            "description": "Discord User ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful got info",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DiscordInfo"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BackendHealthy": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "format": "str",
+            "example": "Hello, I'm a API for Leonis :)"
+          },
+          "leonis": {
+            "type": "boolean",
+            "example": true
+          }
+        }
+      },
+      "DiscordInfo": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "format": "str",
+            "example": "orion_off"
+          },
+          "avatar": {
+            "type": "string",
+            "format": "str",
+            "example": "https://cdn.discordapp.com/avatars/902671568856047636/df9b91c56efa46acd37844b6313c4090.webp?size=4096"
+          },
+          "status": {
+            "type": "string",
+            "format": "str",
+            "example": "Elsässisch"
+          }
+        }
+      }
+    }
+  }
+}
