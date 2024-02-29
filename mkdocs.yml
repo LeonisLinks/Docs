@@ -2,6 +2,7 @@ site_name: Leonis
 nav:
   - Home: "index.md"
   - Make your Leonis: "make.md"
+  - Backend: "backend.md"
 theme:
   name: material
   palette:
@@ -29,6 +30,7 @@ theme:
 plugins:
   - search
   - git-revision-date-localized
+  - swagger-ui-tag
 extra:
   social:
     - icon: fontawesome/brands/github
