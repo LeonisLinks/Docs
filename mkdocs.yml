@@ -1,6 +1,6 @@
 site_name: Leonis
 nav:
-  - Accueil: "index.md"
+  - Home: "index.md"
   - Make your Leonis: "make.md"
 theme:
   name: material
@@ -24,6 +24,8 @@ theme:
   features:
     - navigation.instant
     - navigation.tabs
+    - content.code.copy
+    - content.code.select
 plugins:
   - search
   - git-revision-date-localized
@@ -34,6 +36,13 @@ extra:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/Y9SvsWk26B
 markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
   - md_in_html
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
